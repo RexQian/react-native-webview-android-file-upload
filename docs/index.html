@@ -31,71 +31,38 @@
 
   <form action="#">
     <p>
-      <label id="toggle-multiple">
-        <input type="checkbox" />
-        <span>multiple files</span>
-      </label>
-    </p>
-    <p>
       <label>
-        <strong>Default</strong> (no accept attr)
+        <strong>Image From Gallery</strong>
         <br>
-        <input type="file" class="toggle-multiple" />
+        <input type="file" accept="image/*" />
       </label>
     </p>
     <br>
     <p>
       <label>
-        <strong>Accept "image/*"</strong>
+        <strong>Video From Gallery</strong>
         <br>
-        <input type="file" accept="image/*" class="toggle-multiple" />
+        <input type="file" accept="video/*" />
       </label>
     </p>
     <br>
     <p>
       <label>
-        <strong>Accept "video/*"</strong>
+        <strong>Image From Camera</strong>
         <br>
-        <input type="file" accept="video/*" class="toggle-multiple" />
+        <input type="file" accept="image/*" capture="camera"/>
       </label>
     </p>
     <br>
     <p>
       <label>
-        <strong>Accept "image/*, video/*"</strong>
+        <strong>Video From Camera</strong>
         <br>
-        <input type="file" accept="image/*, video/*" class="toggle-multiple" />
+        <input type="file" accept="video/*" capture="camcorder"/>
       </label>
     </p>
     <br>
-    <p>
-      <label>
-        <strong>Multiple files</strong>
-        <br>
-        <input type="file" multiple />
-      </label>
-    </p>
   </form>
-
-  <script>
-    try {
-      const toggleMultiple = document.getElementById("toggle-multiple");
-      const toggleMultipleText = toggleMultiple.querySelector("span").textContent;
-      toggleMultiple.querySelector("input").addEventListener("change", event => {
-        document.querySelectorAll(".toggle-multiple").forEach(input => {
-          if (event.target.checked) {
-            input.setAttribute("multiple", true);
-          } else {
-            input.removeAttribute("multiple");
-          }
-          toggleMultiple.querySelector("span").textContent = `${toggleMultipleText} (${event.target.checked.toString()})`;
-        });
-      })
-    } catch (e) {
-      alert(e);
-    }
-  </script>
-
 </body>
 
 </html>
