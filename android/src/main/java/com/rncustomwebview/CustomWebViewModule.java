@@ -112,6 +112,9 @@ public class CustomWebViewModule extends ReactContextBaseJavaModule implements A
     public boolean startPhotoPickerIntent(
         final ValueCallback<Uri[]> filePathCallback,
         final WebChromeClient.FileChooserParams fileChooserParams) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            return true;
+        }
         this.filePathCallback = filePathCallback;
         String[] acceptTypes = fileChooserParams.getAcceptTypes();
         if (acceptsImages(acceptTypes)) {
