@@ -16,15 +16,14 @@ What this module does:
 * adds support for the `multiple` attribute;
 * adds support for sdk 26, using `FileProvider`;
 * adds runtime Camera Permissions (thanks [Pablo Navarro](https://github.com/Zjarr));
+* adds support for the `capture` attribute;
 
 It should work with React Native 0.50+, and reverts to the built-in WebView on iOS.
-
-![](https://github.com/andreipfeiffer/react-native-webview-android-file-upload/blob/master/docs/preview.gif)
 
 # Installation
 
 ```bash
-npm install git+ssh://git@github.com:andreipfeiffer/react-native-webview-android-file-upload.git
+npm install git+ssh://git@github.com:rexqian/react-native-webview-android-file-upload.git
 ```
 
 ### Auto linking
