@@ -22,7 +22,7 @@ export default class App extends Component {
           domStorageEnabled={true}
           source={{
             uri:
-              "https://andreipfeiffer.github.io/react-native-webview-android-file-upload/index.html"
+              "https://rexqian.github.io/react-native-webview-android-file-upload/index.html"
           }}
         />
 
