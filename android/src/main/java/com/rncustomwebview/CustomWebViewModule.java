@@ -256,7 +256,7 @@ public class CustomWebViewModule extends ReactContextBaseJavaModule implements A
             Log.e("CREATE FILE", "Error occurred while creating the File", e);
             e.printStackTrace();
         }
-        return FileProvider.getUriForFile(getReactApplicationContext(), packageName + ".fileprovider", capturedFile);
+        return FileProvider.getUriForFile(getReactApplicationContext(), packageName + ".provider", capturedFile);
     }
 
     private Boolean isArrayEmpty(String[] arr) {
